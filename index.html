@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Redirect</title>
+    <script>
+        // Replace these links with your actual Google Forms URLs
+        const surveyLinks = [
+            "https://docs.google.com/forms/d/e/1FAIpQLSdrYxJtbYeBoo9lyJYzvFoGN9YJ3Vd2Ye2z6hG_T6jTegAJyQ/viewform?usp=publish-editor",
+            "https://docs.google.com/forms/d/e/1FAIpQLSfMzgX_VrZynD4vAkg1nlUsUL_WylZs0rTYRklhd4vjR_Ytjw/viewform?usp=publish-editor",
+            "https://docs.google.com/forms/d/e/1FAIpQLSej9gdMKQcAhoL8k84CEFRMox6JjKQHcOx9R00UTMQLjXDJ0A/viewform?usp=dialog",
+            "https://docs.google.com/forms/d/e/1FAIpQLScrl9dfkw4hh93ubJEh-ymkiqtqwMnExLGyR1iYoyOFTtuqOQ/viewform?usp=dialog"
+        ];
+
+        // Randomly select one survey
+        const randomIndex = Math.floor(Math.random() * surveyLinks.length);
+        const selectedSurvey = surveyLinks[randomIndex];
+
+        // Redirect after short delay (optional - feels smoother)
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = selectedSurvey;
+            }, 500);
+        };
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; margin-top: 100px;">
+    <h2>Redirecting to survey...</h2>
+    <p>Please wait a moment.</p>
+</body>
+</html>
